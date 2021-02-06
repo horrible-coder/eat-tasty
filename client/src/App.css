@@ -1,0 +1,12 @@
+.App {
+  height: 100vh;
+}
+.form {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+}
+.userForm,
+.Cart {
+  margin: 0 auto;
+}

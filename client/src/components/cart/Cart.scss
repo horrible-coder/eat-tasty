@@ -1,0 +1,84 @@
+$font-stack: "Poppins", sans-serif;
+$primary-color: white;
+$secondary-color: black;
+$input-focus-color: #ffdb58;
+$button-color: rgb(190, 15, 15);
+$button-hover-color: rgb(240, 38, 38);
+
+.Cart {
+  font-family: $font-stack;
+  border: 1px solid lightgrey;
+  background-color: $primary-color;
+  border-radius: 10px;
+  padding: 20px;
+  width: 50%;
+
+  svg {
+    float: right;
+    color: darkgrey;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .cartContainer {
+    display: flex;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+    }
+
+    svg {
+      color: darkgrey;
+      cursor: pointer;
+    }
+
+    .cartItemName {
+      flex: 5;
+    }
+    .setCartItemQuantity {
+      flex: 0.7;
+      text-align: center;
+    }
+    .cartItemQuantity {
+      flex: 1.5;
+      text-align: center;
+    }
+    .rs {
+      flex: 0.8;
+      text-align: right;
+    }
+    .cartItemPrice {
+      flex: 1;
+      text-align: right;
+    }
+    .deleteIcon {
+      color: $button-color;
+      margin-left: 30px;
+    }
+    .deleteIcon:hover {
+      color: $button-hover-color;
+    }
+  }
+  h3 {
+    border-top: 1px solid lightgrey;
+    padding: 20px 0 0 0;
+    width: 92%;
+    span {
+      float: right;
+    }
+  }
+  .emptyCart {
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}

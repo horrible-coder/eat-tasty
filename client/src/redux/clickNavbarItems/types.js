@@ -1,0 +1,12 @@
+const clickNavbarItemsTypes = {
+  OPEN_LOGIN: "OPEN_LOGIN",
+  CLOSE_LOGIN: "CLOSE_LOGIN",
+  OPEN_SIGNUP: "OPEN_SIGNUP",
+  CLOSE_SIGNUP: "CLOSE_SIGNUP",
+  OPEN_CART: "OPEN_CART",
+  CLOSE_CART: "CLOSE_CART",
+  USER_LOGGED_IN: "USER_LOGGED_IN",
+  USER_LOGGED_OUT: "USER_LOGGED_OUT",
+};
+
+export default clickNavbarItemsTypes;

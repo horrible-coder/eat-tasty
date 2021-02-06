@@ -1,0 +1,107 @@
+$font-stack: "Poppins", sans-serif;
+$primary-color: #ffdb58;
+$secondary-color: black;
+$input-focus-color: #ffdb58;
+$button-color: rgb(190, 15, 15);
+$button-hover-color: rgb(240, 38, 38);
+
+.Menu {
+  padding: 10px;
+  font-family: $font-stack;
+
+  .menuContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    img {
+      width: 24px;
+      flex: 0.5;
+    }
+
+    p {
+      margin: 0;
+    }
+    .menuItemDetails {
+      flex: 6;
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+
+      .menuItemName {
+        font-size: 1.1em;
+      }
+      .menuItemPrice {
+        font-size: 0.9em;
+      }
+    }
+
+    /* .menuItemQuantity {
+      flex: 0.6;
+      text-align: center;
+    }
+
+    svg {
+      cursor: pointer;
+      flex: 0.5;
+      color: darkgrey;
+      min-width: 20px;
+    } */
+    button {
+      flex: 2;
+      font-family: $font-stack;
+      font-size: 0.9em;
+      background-color: $button-color;
+      color: white;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 0 5px 0 25px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: $button-hover-color;
+    }
+  }
+
+  .proceedFooter {
+    position: sticky;
+    height: 12vh;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 0 20%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      flex: 3;
+      font-size: 1.3em;
+      font-weight: 400;
+      span {
+        margin-right: 30px;
+        font-weight: bold;
+      }
+    }
+
+    button {
+      background-color: $primary-color;
+      font-family: $font-stack;
+      font-size: 1.1em;
+      text-transform: uppercase;
+      padding: 8px 30px;
+      margin: 5px 0px 5px 30px;
+      border: 1px solid $primary-color;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+$font-stack: "Poppins", sans-serif;
+$primary-color: #ffdb58;
+$secondary-color: black;
+$button-color: rgb(39, 82, 39);
+$button-hover-color: rgba(40, 131, 40, 0.952);
+
+.userForm {
+  width: 25%;
+  border: 1px solid rgb(218, 218, 218);
+  min-width: 350px;
+  border-radius: 10px;
+  background-color: white;
+
+  svg {
+    float: right;
+    color: darkgrey;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+.userLogin,
+.userSignup {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px 25px 25px;
+  flex: content;
+
+  input {
+    font-family: $font-stack;
+    height: 50px;
+    margin: 10px 0;
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+    padding: 0 25px;
+    font-size: 0.9em;
+  }
+
+  input:focus {
+    border: 1px solid $primary-color;
+  }
+
+  p {
+    font-family: $font-stack;
+    margin-bottom: 0;
+    font-size: 0.85em;
+    text-align: center;
+
+    span {
+      text-decoration: none;
+      color: $button-color;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    span:hover {
+      color: $button-hover-color;
+    }
+  }
+
+  button {
+    font-family: $font-stack;
+    height: 50px;
+    margin: 15px auto 10px;
+    width: 60%;
+    color: white;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: 50px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $button-hover-color;
+    border: 1px solid $button-hover-color;
+  }
+}

@@ -1,0 +1,126 @@
+$font-stack: "Poppins", sans-serif;
+$primary-color: white;
+$secondary-color: black;
+$input-focus-color: #ffdb58;
+$button-color: rgb(39, 82, 39);
+$button-hover-color: rgba(40, 131, 40, 0.952);
+
+.Home {
+  display: flex;
+  height: 88vh;
+  .container {
+    flex: 1;
+    background: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
+      no-repeat center center fixed;
+    background-size: cover;
+
+    .headingText {
+      font-family: $font-stack;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      h2 {
+        margin: 5% 0 0 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+
+    .searchRestaurantBox {
+      margin: 3% auto;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 50%;
+      padding: 25px;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      select {
+        font-family: $font-stack;
+        height: 50px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        font-size: 1em;
+        padding-left: 15px;
+        color: gray;
+      }
+      option {
+        font-size: 0.95em;
+      }
+
+      input {
+        font-family: $font-stack;
+        height: 44px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        font-size: 1em;
+        padding-left: 15px;
+        color: gray;
+      }
+
+      button {
+        flex: 1;
+        background-color: $button-color;
+        border: 1px solid $button-color;
+        border-radius: 50px;
+        cursor: pointer;
+
+        a {
+          color: white;
+          font-family: $font-stack;
+          text-decoration: none;
+          font-size: 1.25em;
+        }
+      }
+
+      button:hover {
+        background-color: $button-hover-color;
+        border: 1px solid $button-hover-color;
+      }
+
+      .searchRestaurantUsingLocation {
+        display: flex;
+
+        #city {
+          flex: 2;
+        }
+        #location {
+          flex: 3;
+          margin: 0 15px;
+        }
+      }
+
+      .horizontalLine {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        .leftHorizontalLine {
+          flex: 10;
+          background-color: rgb(218, 218, 218);
+          height: 1px;
+        }
+        .orText {
+          flex: 1;
+          font-family: $font-stack;
+          color: rgb(218, 218, 218);
+          text-align: center;
+        }
+        .rightHorizontalLine {
+          flex: 10;
+          height: 1px;
+          background-color: rgb(218, 218, 218);
+        }
+      }
+
+      .searchRestaurant {
+        display: flex;
+        margin-top: 10px;
+        #restaurant {
+          flex: 6;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+$font-stack: "Poppins", sans-serif;
+$primary-color: #ffdb58;
+$secondary-color: black;
+$input-focus-color: #ffdb58;
+$button-color: rgb(39, 82, 39);
+$button-hover-color: rgba(40, 131, 40, 0.952);
+
+.Order {
+  padding: 40px;
+  font-family: $font-stack;
+
+  .orderDetails {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 75px;
+      margin: 0 auto;
+    }
+
+    .orderConfirmationText {
+      text-align: center;
+      margin-bottom: 5px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .orderSummaryContainer {
+      display: flex;
+
+      .serialNo {
+        flex: 0.5;
+      }
+
+      .orderItemName {
+        flex: 5;
+      }
+
+      .setOrderItemQuantity {
+        flex: 0.5;
+        text-align: left;
+      }
+      .orderItemPrice {
+        flex: 2;
+        text-align: right;
+      }
+    }
+    .subTotal {
+      margin-bottom: 0;
+      span {
+        float: right;
+      }
+    }
+    a {
+      text-align: center;
+      margin-top: 30px;
+      button {
+        flex: 1;
+        background-color: $button-color;
+        border: 1px solid $button-color;
+        border-radius: 50px;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: white;
+        font-family: $font-stack;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
+      button:hover {
+        background-color: $button-hover-color;
+        border: 1px solid $button-hover-color;
+      }
+    }
+  }
+}
