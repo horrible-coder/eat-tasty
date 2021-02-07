@@ -1,4 +1,5 @@
-$font-stack: "Poppins", sans-serif;
+$font-stack: "Raleway", sans-serif;
+$font-stack-2: "Poppins", sans-serif;
 $primary-color: white;
 $secondary-color: black;
 $input-focus-color: #ffdb58;
@@ -10,30 +11,27 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
   height: 88vh;
   .container {
     flex: 1;
-    background: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
-      no-repeat center center fixed;
+    background: url("../../assets/home.jpg") no-repeat center -10px fixed;
     background-size: cover;
 
     .headingText {
       font-family: $font-stack;
-      color: white;
+      color: black;
       font-size: 2em;
-      text-align: center;
       h2 {
-        margin: 5% 0 0 0;
+        margin: 6% 0 0 3%;
       }
       p {
-        margin: 0;
+        margin: 0.5% 0 0 3%;
       }
     }
 
     .searchRestaurantBox {
-      margin: 3% auto;
-      border: 1px solid rgba(0, 0, 0, 0.1);
+      margin: 3%;
       border-radius: 10px;
       width: 50%;
       padding: 25px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.2);
 
       select {
         font-family: $font-stack;
@@ -67,7 +65,7 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
 
         a {
           color: white;
-          font-family: $font-stack;
+          font-family: $font-stack-2;
           text-decoration: none;
           font-size: 1.25em;
         }
