@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
@@ -10,8 +10,12 @@ import {
   userLoggedOut,
 } from "../../redux/clickNavbarItems/actions";
 import { clearCart } from "../../redux/cartItems/actions";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
+  const [menu, setMenu] = useState(false);
+
   const totalQuantity = useSelector((state) => state.cartDetails.totalQuantity);
   const isAuthenticated = useSelector(
     (state) => state.clickNavbarItems.isAuthenticated
@@ -40,8 +44,24 @@ function Navbar() {
               <LocalMallIcon onClick={() => dispatch(openCart())} />
               <span>{totalQuantity}</span>
             </div>
-            <li>{localStorage.getItem("username")}</li>
-            <li onClick={handleIsAuthenticated}>Logout</li>
+            {menu ? (
+              <>
+                <div className="dropdown-items">
+                  <li>{localStorage.getItem("username")}</li>
+                  <li onClick={handleIsAuthenticated}>Logout</li>
+                </div>
+
+                <CloseIcon id="close" onClick={() => setMenu(false)} />
+              </>
+            ) : (
+              <>
+                <div className="navbar-items">
+                  <li>{localStorage.getItem("username")}</li>
+                  <li onClick={handleIsAuthenticated}>Logout</li>
+                </div>
+                <MenuIcon id="hamburger-menu" onClick={() => setMenu(true)} />
+              </>
+            )}
           </ul>
         ) : (
           <ul>
@@ -49,8 +69,24 @@ function Navbar() {
               <LocalMallIcon onClick={() => dispatch(openCart())} />
               <span>{totalQuantity}</span>
             </div>
-            <li onClick={() => dispatch(openLogin())}>Login</li>
-            <li onClick={() => dispatch(openSignup())}>Sign Up</li>
+
+            {menu ? (
+              <>
+                <div className="dropdown-items">
+                  <li onClick={() => dispatch(openLogin())}>Login</li>
+                  <li onClick={() => dispatch(openSignup())}>Sign Up</li>
+                </div>
+                <CloseIcon id="close" onClick={() => setMenu(false)} />
+              </>
+            ) : (
+              <>
+                <div className="navbar-items">
+                  <li onClick={() => dispatch(openLogin())}>Login</li>
+                  <li onClick={() => dispatch(openSignup())}>Sign Up</li>
+                </div>
+                <MenuIcon id="hamburger-menu" onClick={() => setMenu(true)} />
+              </>
+            )}
           </ul>
         )}
       </div>

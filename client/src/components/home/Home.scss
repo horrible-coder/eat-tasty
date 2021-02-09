@@ -8,73 +8,32 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
 
 .Home {
   display: flex;
-  height: 88vh;
+  height: calc(100vh - 80px);
   .container {
     flex: 1;
-    background: url("../../assets/home.jpg") no-repeat center -10px fixed;
+    background: url("../../assets/home.jpg") no-repeat center center fixed;
     background-size: cover;
 
     .headingText {
       font-family: $font-stack;
       color: black;
-      font-size: 2em;
+
       h2 {
-        margin: 6% 0 0 3%;
+        font-size: 3em;
+        margin: 75px 0 0 3%;
       }
       p {
-        margin: 0.5% 0 0 3%;
+        font-size: 2em;
+        margin: 10px 0 25px 3%;
       }
     }
 
     .searchRestaurantBox {
-      margin: 3%;
       border-radius: 10px;
       width: 50%;
-      padding: 25px;
       background-color: rgba(0, 0, 0, 0.2);
-
-      select {
-        font-family: $font-stack;
-        height: 50px;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        font-size: 1em;
-        padding-left: 15px;
-        color: gray;
-      }
-      option {
-        font-size: 0.95em;
-      }
-
-      input {
-        font-family: $font-stack;
-        height: 44px;
-        border: 2px solid transparent;
-        border-radius: 10px;
-        font-size: 1em;
-        padding-left: 15px;
-        color: gray;
-      }
-
-      button {
-        flex: 1;
-        background-color: $button-color;
-        border: 1px solid $button-color;
-        border-radius: 50px;
-        cursor: pointer;
-
-        a {
-          color: white;
-          font-family: $font-stack-2;
-          text-decoration: none;
-          font-size: 1.25em;
-        }
-      }
-
-      button:hover {
-        background-color: $button-hover-color;
-        border: 1px solid $button-hover-color;
-      }
+      margin: 0 3%;
+      padding: 20px;
 
       .searchRestaurantUsingLocation {
         display: flex;
@@ -82,41 +41,77 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
         #city {
           flex: 2;
         }
+
         #location {
           flex: 3;
           margin: 0 15px;
         }
-      }
 
-      .horizontalLine {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-
-        .leftHorizontalLine {
-          flex: 10;
-          background-color: rgb(218, 218, 218);
-          height: 1px;
-        }
-        .orText {
-          flex: 1;
+        select {
           font-family: $font-stack;
-          color: rgb(218, 218, 218);
-          text-align: center;
+          font-size: 1em;
+          padding: 15px;
+          border: 2px solid transparent;
+          border-radius: 10px;
+          color: gray;
         }
-        .rightHorizontalLine {
-          flex: 10;
-          height: 1px;
-          background-color: rgb(218, 218, 218);
+
+        button {
+          background-color: $button-color;
+          border: 1px solid $button-color;
+          border-radius: 50px;
+          cursor: pointer;
+          font-size: 1em;
+          padding: 0 25px;
+          flex: 1;
+
+          a {
+            color: white;
+            font-family: $font-stack-2;
+            text-decoration: none;
+          }
+        }
+
+        button:hover {
+          background-color: $button-hover-color;
+          border: 1px solid $button-hover-color;
         }
       }
+    }
 
-      .searchRestaurant {
-        display: flex;
-        margin-top: 10px;
-        #restaurant {
-          flex: 6;
-          margin-right: 15px;
+    @media screen and (max-width: 900px) {
+      .searchRestaurantBox {
+        width: 60%;
+      }
+    }
+    @media screen and (max-width: 668px) {
+      .headingText {
+        text-align: center;
+        h2 {
+          font-size: 2.7em;
+          margin: 50px 0 0;
+        }
+        p {
+          font-size: 1.7em;
+          margin: 10px 0 20px;
+        }
+      }
+      .searchRestaurantBox {
+        width: 70%;
+        margin: 0 auto;
+        .searchRestaurantUsingLocation {
+          display: flex;
+          flex-direction: column;
+          #location {
+            margin: 15px 0;
+          }
+          button {
+            padding: 15px 40px;
+            margin: 0 auto;
+          }
+          option {
+            font-size: 0.9em;
+          }
         }
       }
     }
