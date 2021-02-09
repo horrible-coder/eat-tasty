@@ -16,13 +16,14 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
 
     .headingText {
       font-family: $font-stack;
-      color: black;
+      color: #ffd700;
 
       h2 {
         font-size: 3em;
         margin: 75px 0 0 3%;
       }
       p {
+        color: whitesmoke;
         font-size: 2em;
         margin: 10px 0 25px 3%;
       }
@@ -53,7 +54,6 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
           padding: 15px;
           border: 2px solid transparent;
           border-radius: 10px;
-          color: gray;
         }
 
         button {
