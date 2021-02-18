@@ -1,4 +1,4 @@
-$font-stack: "Poppins", sans-serif;
+$font-stack: "Overpass", sans-serif;
 $primary-color: #ffdb58;
 $secondary-color: black;
 $input-focus-color: #ffdb58;
@@ -12,7 +12,7 @@ $button-hover-color: rgb(240, 38, 38);
   .menuContainer {
     display: flex;
     align-items: center;
-    border: 1px solid lightgrey;
+    box-shadow: 1px 5px 10px rgb(228, 228, 228);
     width: 60%;
     margin: 20px auto;
     padding: 20px;
@@ -65,6 +65,7 @@ $button-hover-color: rgb(240, 38, 38);
       cursor: pointer;
     }
     button:hover {
+      transition: 0.4s ease-in;
       background-color: $button-hover-color;
     }
   }
@@ -97,7 +98,7 @@ $button-hover-color: rgb(240, 38, 38);
       font-family: $font-stack;
       font-size: 1.1em;
       text-transform: uppercase;
-      padding: 8px 30px;
+      padding: 13px 30px 8px;
       margin: 5px 0px 5px 30px;
       border: 1px solid $primary-color;
       border-radius: 10px;

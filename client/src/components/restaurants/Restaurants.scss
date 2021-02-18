@@ -1,4 +1,4 @@
-$font-stack: "Poppins", sans-serif;
+$font-stack: "Overpass", sans-serif;
 $primary-color: white;
 $secondary-color: black;
 $input-focus-color: #ffdb58;
@@ -18,15 +18,15 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
     display: flex;
     width: 60%;
     margin: 20px auto;
-    border: 1px solid lightgrey;
+    box-shadow: 1px 5px 10px rgb(228, 228, 228);
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.2s;
 
     img {
       width: 250px;
       height: 150px;
-
       border-radius: 10px;
     }
 
@@ -51,5 +51,8 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
         border: none;
       }
     }
+  }
+  .restaurantContainer:hover {
+    transform: scale(1.03);
   }
 }

@@ -1,5 +1,4 @@
-$font-stack: "Raleway", sans-serif;
-$font-stack-2: "Poppins", sans-serif;
+$font-stack: "Overpass", sans-serif;
 $primary-color: white;
 $secondary-color: black;
 $input-focus-color: #ffdb58;
@@ -16,16 +15,25 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
 
     .headingText {
       font-family: $font-stack;
-      color: #ffd700;
+      color: white;
 
       h2 {
         font-size: 3em;
         margin: 75px 0 0 3%;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        padding: 0 20px;
+        border-radius: 10px;
       }
       p {
-        color: whitesmoke;
+        color: white;
         font-size: 2em;
         margin: 10px 0 25px 3%;
+        background-color: rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        width: fit-content;
+        padding: 0 20px;
+        border-radius: 10px;
       }
     }
 
@@ -67,7 +75,7 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
 
           a {
             color: white;
-            font-family: $font-stack-2;
+            font-family: $font-stack;
             text-decoration: none;
           }
         }
@@ -86,14 +94,13 @@ $button-hover-color: rgba(40, 131, 40, 0.952);
     }
     @media screen and (max-width: 668px) {
       .headingText {
-        text-align: center;
         h2 {
           font-size: 2.7em;
-          margin: 50px 0 0;
+          margin: 50px auto 0;
         }
         p {
           font-size: 1.7em;
-          margin: 10px 0 20px;
+          margin: 10px auto 20px;
         }
       }
       .searchRestaurantBox {
